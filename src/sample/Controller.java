@@ -1,14 +1,19 @@
 package sample;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 public class Controller {
     private Game game = new Game();
@@ -189,10 +194,14 @@ public class Controller {
         }
         game.whoIsWon();
     }
+    @FXML
+    void buttonOnePlayerClick(MouseEvent event) {
+        game.newGame();
+    }
 
     @FXML
     void buttonTwoPlayerGameClick(MouseEvent event) {
-
+        game.newGame();
     }
 
     @FXML

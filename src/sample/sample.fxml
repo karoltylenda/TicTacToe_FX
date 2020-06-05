@@ -74,7 +74,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="64.0" prefWidth="298.0">
                <children>
-                  <Button fx:id="onePlayerButton" layoutX="29.0" layoutY="39.0" mnemonicParsing="false" text="One Player game" />
+                  <Button fx:id="onePlayerButton" layoutX="29.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#buttonOnePlayerClick" text="One Player game" />
                   <Button fx:id="twoPlayerButton" layoutX="164.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#buttonTwoPlayerGameClick" text="Two Player game" />
                </children>
             </AnchorPane>

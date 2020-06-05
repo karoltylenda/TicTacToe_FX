@@ -1,7 +1,9 @@
 package sample;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.stage.Stage;
 
 public class Game {
     private char ch = 'X';
@@ -58,6 +60,18 @@ public class Game {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "REMIS!!!", ButtonType.OK );
             alert.show();
         }
+    }
+
+    public void newGame(){
+        Main main = new Main();
+        Stage primaryStage = new Stage();
+        main.setRoot();
+        main.getRoot();
+        primaryStage.setTitle("Tic Tac Toe in Java FX");
+        primaryStage.setScene(new Scene(main.getRoot()));
+        primaryStage.show();
+        main.stage.close();
+        main.stage = primaryStage;
     }
 
 }
